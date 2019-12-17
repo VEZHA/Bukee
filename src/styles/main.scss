@@ -90,6 +90,7 @@ body {
     &__name {
         font-family: 'Open Sans', serif;
         font-size:18px;
+        margin-bottom: 41px
     }
     &__name_top{
         margin-top: 16px;
@@ -105,7 +106,7 @@ body {
             font-family: 'Open Sans', sans-serif;
             color:$accient-color;
             font-size: 18px;
-            margin-top: 9px;
+            margin-top: 31px;
             letter-spacing: 0.9px;
         }
     }
@@ -168,9 +169,10 @@ body {
 .block-counter{
     display: flex;
     justify-content: space-around;
-    margin-top:162px;
+    margin-top: 162px;
+    margin-bottom: 165px;
+    font-family: 'Open Sans', serif;
     p{
-        font-family: 'Open-sans', serif;
         text-align: center;
         font-size: 18px;
         span{
@@ -189,13 +191,13 @@ body {
     margin-top: 82px;
     h3{
         margin-bottom: 20px;
-        letter-spacing: 0.6px;
-    }
-    p{
-        
     }
     &-text{
         flex-basis: 41%;
+        &_desc {
+            font-family: "Open Sans", serif;
+            letter-spacing: 0.6px;
+        }
     }
     &-table{
         flex-basis: 49%;
@@ -222,9 +224,46 @@ body {
                     position: absolute;
                     left:0;
                     top: 1px;
-                    background-color: $accient-color;
+                    background-color: #5fc9b5;
                     color: $bg-light-color;
                     padding: 0px 7px;
+                }
+            }
+        }
+        &_btn{
+            border-style: none;
+            background-color: #65e496;
+            width: 135px;
+            height: 50px;
+            font-family: "RobotoSlab", regular;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 37px;
+            margin-bottom: 255px;
+            border-radius: 3px;
+            letter-spacing: 1.1px;
+        }
+    }
+    &-social{
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+        &__title{
+            font-family: "Roboto Slab", serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.9px   ;
+        }
+        &__list{
+            list-style-type: none;
+            padding-left: 23px;
+            &>li{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 18px;
+                margin-right: 12px;
+                &>a{
+                    color: $accient-color;
                 }
             }
         }
