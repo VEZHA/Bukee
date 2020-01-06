@@ -26,9 +26,10 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Roboto+Slab:100,400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/2ad7f5c6b6.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
     <body>
-        <div class="page-main">
+        <div class="page-main page-main__mobile">
             <header>
                     <div class="header">
                         <a href="" class="header__logo"></a>
@@ -41,7 +42,7 @@
                             <li class="header-list__item"><a href="" class="header-list__link">Skills</a></li>
                             <li class="header-list__item"><a href="" class="header-list__link">Portfolio</a></li>
                             <li class="header-list__item"><a href="" class="header-list__link">Clients</a></li>
-                            <li class="header-list__item"><a href="" class="header-list__link">Contact</a></li>
+                            <li class="header-list__item header-list__item_last"><a href="" class="header-list__link">Contact</a></li>
                         </ul>
                     </div>
             </header>
@@ -112,7 +113,7 @@
                     </div>
                     <div class="block-about-table">
                         <h3>Table of contents</h3>
-                        <ol class="block-about-table_list">
+                        <ol class="block-about-table__list">
                             <li>Loros ipsum dolos ipram</li>
                             <li>Consektuer sim adip</li>
                             <li>Loros ipsum dolos ipram</li>
@@ -124,7 +125,19 @@
                             <li>Loros ipsum dolos ipram</li>
                             <li>Consektuer sim adip</li>
                         </ol>
-                        <a href="" class="block-about-table_btn">More</a>
+                        <ol class="block-about-table__list block-about-table__list_next" style="display:none" id="nextContentsList">
+                            <li>Loros ipsum dolos ipram</li>
+                            <li>Consektuer sim adip</li>
+                            <li>Loros ipsum dolos ipram</li>
+                            <li>Consektuer sim adip</li>
+                            <li>Loros ipsum dolos ipram</li>
+                            <li>Consektuer sim adip</li>
+                            <li>Loros ipsum dolos ipram</li>
+                            <li>Consektuer sim adip</li>
+                            <li>Loros ipsum dolos ipram</li>
+                            <li>Consektuer sim adip</li>
+                        </ol>
+                        <button id="nextContents" class="block-about-table_btn">More</button>
                     </div>
                 </div>
             </div>
@@ -177,6 +190,46 @@
                 </div>
                 <a href="" class="block-btn">Browse all books</a>
             </div>
+        </div>
+        <div class="page page-carousel">
+            <div class="wrap">
+                <div class="block-carousel">
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                             </div>
+                             <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>                           
+                    </div>
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                             </div>
+                             <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                    <div>
+                        <div class="block-carousel-ava">
+                            <div class="block-carousel-thumb">
+                                <img src="../img/feedback.png" alt="">
+                             </div>
+                             <span class="block-carousel-bq"></span>
+                        </div>
+                        <h3>Kate Dennings</h3>
+                        <p class="block-carousel__desc block-carousel__expert">Calligraphy Expert</p>
+                        <p class="block-carousel__desc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                </div>
+            </div>
+            <svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 849"><path d="M-1 0l802 61 799-61v789l-799 60-802-60V0z" fill="#44444f" fill-rule="evenodd"/></svg> 
         </div>
         <div class="page">
             <div class="wrap">
@@ -295,6 +348,19 @@
             </div>
         </div>
         <script src="../js/main.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('.block-carousel').slick({
+                dots: true,
+                arrows: false,
+            });
+            });
+            $("#nextContents").click(function(){
+            $("#nextContentsList").fadeIn();
+            $("#nextContents").hide();
+            });
+	    </script>
     </body>
 </html>
